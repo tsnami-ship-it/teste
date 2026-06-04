@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Simulação Pinterest</title>
+</head>
+<body>
+
+<h1>Simulação de Pin</h1>
+
+<p>Você clicou no Pin</p>
+
+<button onclick="fluxo()">
+Continuar
+</button>
+
+<script>
+function fluxo() {
+
+    // Simula "site intermediário"
+    document.body.innerHTML = "<h2>Carregando conteúdo...</h2>";
+
+    setTimeout(() => {
+
+        // tenta abrir outro site (pode ser bloqueado)
+        window.open("https://www.wikipedia.org", "_blank");
+
+        // redireciona a aba atual
+        window.location.href = "https://www.google.com";
+
+    }, 500);
+}
+</script>
+
+</body>
+</html>
